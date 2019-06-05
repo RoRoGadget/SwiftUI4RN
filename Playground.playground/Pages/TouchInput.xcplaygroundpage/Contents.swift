@@ -2,6 +2,8 @@ import UIKit
 import SwiftUI
 import PlaygroundSupport
 
+// https://facebook.github.io/react-native/docs/handling-touches
+
 struct ButtonBasics: View {
     
     @State var text: String = ""

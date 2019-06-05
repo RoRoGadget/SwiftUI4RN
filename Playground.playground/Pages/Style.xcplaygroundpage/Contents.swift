@@ -2,6 +2,8 @@ import UIKit
 import SwiftUI
 import PlaygroundSupport
 
+// https://facebook.github.io/react-native/docs/style
+
 struct LotsOfStyles: View {
     
     var body: some View {

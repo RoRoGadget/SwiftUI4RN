@@ -2,6 +2,8 @@ import UIKit
 import SwiftUI
 import PlaygroundSupport
 
+// https://facebook.github.io/react-native/docs/state
+
 struct Blink: View {
     
     @State var isShowingText: Bool = true

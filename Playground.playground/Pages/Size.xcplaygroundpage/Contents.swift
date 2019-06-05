@@ -2,6 +2,8 @@ import UIKit
 import SwiftUI
 import PlaygroundSupport
 
+// https://facebook.github.io/react-native/docs/height-and-width
+
 struct FixedDimensionsBasics: View {
     
     var body: some View {
