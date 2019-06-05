@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' executeOnSourceChanges='true'>
+    <pages>
+        <page name='HelloWorld'/>
+        <page name='State'/>
+        <page name='Style'/>
+        <page name='Size'/>
+        <page name='TextInput'/>
+        <page name='TouchInput'/>
+        <page name='ScrollView'/>
+        <page name='Lists'/>
+        <page name='SectionList'/>
+    </pages>
+</playground>
