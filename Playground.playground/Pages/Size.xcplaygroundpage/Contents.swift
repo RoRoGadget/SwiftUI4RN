@@ -7,7 +7,7 @@ import PlaygroundSupport
 struct FixedDimensionsBasics: View {
     
     var body: some View {
-        VStack(alignment: .leading, spacing: 0.0) {
+        VStack(alignment: .center, spacing: 0.0) {
             Rectangle()
                 .frame(width: 50, height: 50)
                 .foregroundColor(Color.init(red: 176 / 255, green: 224 / 255, blue: 230 / 255))

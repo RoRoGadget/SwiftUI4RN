@@ -39,11 +39,11 @@ struct ButtonBasics: View {
                     }.accentColor(Color(red: 132 / 255.0, green: 21 / 255.0, blue: 132 / 255.0))
             }.padding(20.0)
         }.padding(20.0)
-        .presentation($showAlert) { () -> Alert in
-            Alert(title: Text("You tapped the button!"),
-                  message: nil,
-                  dismissButton: Alert.Button.default(Text("Ok")))
-        }
+		.alert(isPresented: $showAlert, content: { () -> Alert in
+			Alert(title: Text("You tapped the button!"),
+				  message: nil,
+				  dismissButton: Alert.Button.default(Text("Ok")))
+		})
     }
     
     func onPressButton() {

@@ -19,13 +19,18 @@ let sectionInsets = EdgeInsets(top: 2,
 
 // Attempting to use a [String] as the state variable caused issues with the List component.
 // Utilizing a list of structs with names as member vars seemed consistent with examples on Apple docs.
-struct Person {
-    var name: String
+struct Person: Identifiable {
+	var name: String
+	
+	typealias ID = String
+	var id: String {
+		return name
+	}
 }
 
 struct SectionListBasics: View {
     
-    @State var names: [Person] = [
+    var names: [Person] = [
         Person(name: "Devin"),
         Person(name: "Jackson"),
         Person(name: "James"),
@@ -41,7 +46,7 @@ struct SectionListBasics: View {
             Section(header: Text("D"), footer: EmptyView()) {
                 ForEach(names.filter { (person) -> Bool in
                     return person.name.starts(with: "D")
-                    }.identified(by: \.name)) {
+                    }) {
                         
                         Text(verbatim: $0.name)
                             .frame(height: 44)
@@ -52,7 +57,7 @@ struct SectionListBasics: View {
             Section(header: Text("J"), footer: EmptyView()) {
                 ForEach(names.filter { (person) -> Bool in
                     return person.name.starts(with: "J")
-                    }.identified(by: \.name)) {
+                    }) {
                         
                         Text(verbatim: $0.name)
                             .frame(height: 44)

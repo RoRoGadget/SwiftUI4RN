@@ -11,15 +11,14 @@ struct PizzaTranslator: View {
     var body: some View {
         VStack {
             Spacer()
-            TextField($text, placeholder: Text("Type here to translate!"))
-                .frame(height: 40)
+			TextField("Type here to translate!", text: $text)
+				.frame(height: 40.0)
             Spacer()
             Text(self.text.split(separator: " ").map { (word) in return "🍕" }.joined(separator: " ") )
                 .padding(10)
-                .font(Font.system(size: 42))
+				.font(Font.system(size: 42.0))
             Spacer()
         }
-        
     }
 }
 

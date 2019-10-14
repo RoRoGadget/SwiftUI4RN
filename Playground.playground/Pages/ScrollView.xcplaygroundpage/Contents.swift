@@ -33,4 +33,4 @@ struct IScrolledDownAndWhatHappenedNextShockedMe: View {
     }
 }
 
-PlaygroundPage.current.liveView = UIHostingController(rootView: ScrollComponent())
+PlaygroundPage.current.liveView = UIHostingController(rootView: IScrolledDownAndWhatHappenedNextShockedMe())

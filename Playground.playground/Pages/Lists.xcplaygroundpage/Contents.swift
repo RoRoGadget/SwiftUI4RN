@@ -15,13 +15,18 @@ let listInsets = EdgeInsets(top: 22,
 
 // Attempting to use a [String] as the state variable caused issues with the List component.
 // Utilizing a list of structs with names as member vars seemed consistent with examples on Apple docs.
-struct Person {
+struct Person: Identifiable {
     var name: String
+	
+	typealias ID = String
+	var id: String {
+		return name
+	}
 }
 
 struct FlatListBasics: View {
     
-    @State var names: [Person] = [
+    var names: [Person] = [
         Person(name: "Devin"),
         Person(name: "Jackson"),
         Person(name: "James"),
@@ -33,7 +38,7 @@ struct FlatListBasics: View {
     ]
     
     var body: some View {
-        List(self.names.identified(by: \.name))
+		List(self.names)
         { person in
             Text(verbatim: person.name)
                 .frame(height: 44)
